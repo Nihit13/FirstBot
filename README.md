@@ -2,7 +2,7 @@ Here's a clean, professional `README.md` markdown file you can use for your GitH
 
 ---
 
-````markdown
+
 # 🛠️ Simple Differential Drive Bot with Caster Wheel
 
 This repository contains the implementation of a basic mobile robot modeled using **Xacro**, simulated in **Gazebo** and **RViz**, and controlled via **teleoperation**.
@@ -54,7 +54,7 @@ my_bot/
 │   └── empty.world              # (Optional) Custom Gazebo world
 └── CMakeLists.txt
 └── package.xml
-````
+
 
 ---
 

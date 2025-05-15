@@ -1,3 +1,8 @@
+Here's a clean, professional `README.md` markdown file you can use for your GitHub repo to document your simple mobile robot project:
+
+---
+
+````markdown
 # 🛠️ Simple Differential Drive Bot with Caster Wheel
 
 This repository contains the implementation of a basic mobile robot modeled using **Xacro**, simulated in **Gazebo** and **RViz**, and controlled via **teleoperation**.
@@ -49,5 +54,92 @@ my_bot/
 │   └── empty.world              # (Optional) Custom Gazebo world
 └── CMakeLists.txt
 └── package.xml
+````
 
+---
 
+## 🚀 How to Launch
+
+### 1. **Build the Workspace**
+
+```bash
+cd ~/ros2_ws
+colcon build --packages-select my_bot
+source install/setup.bash
+```
+
+### 2. **Launch the Simulation in Gazebo**
+
+```bash
+ros2 launch my_bot sim.launch.py
+```
+
+This will:
+
+* Launch Gazebo with your robot
+* Start the Robot State Publisher
+* Spawn the model in simulation
+
+### 3. **View in RViz**
+
+```bash
+ros2 launch my_bot rsp.launch.py use_sim_time:=true
+```
+
+Or use:
+
+```bash
+rviz2
+```
+
+and load the config in `rviz/robot_config.rviz`.
+
+### 4. **Control the Robot**
+
+Install teleop package if you haven't:
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-teleop-twist-keyboard
+```
+
+Then run:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+---
+
+## 📷 Preview
+
+*(Add screenshots or a short demo GIF here of the robot in RViz and Gazebo)*
+
+---
+
+## 📚 Dependencies
+
+* ROS 2 (Foxy/Humble/Iron etc.)
+* `gazebo_ros`
+* `xacro`
+* `robot_state_publisher`
+* `teleop_twist_keyboard`
+
+---
+
+## 📎 Notes
+
+* Ensure your Xacro file is valid:
+
+  ```bash
+  xacro robot.urdf.xacro > robot.urdf
+  ```
+* Make sure `robot_description` is correctly published via `robot_state_publisher`.
+* For motion, ensure differential drive plugin is loaded in Gazebo.
+
+---
+
+## 🧠 Credits
+
+Made by Nihit with ❤️ for learning ROS, URDF/Xacro, and simulation.
+
+```

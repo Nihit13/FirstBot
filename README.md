@@ -1,4 +1,3 @@
-Here's a clean, professional `README.md` markdown file you can use for your GitHub repo to document your simple mobile robot project:
 
 ---
 
